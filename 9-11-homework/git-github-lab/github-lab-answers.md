@@ -21,3 +21,7 @@
 - git checkout [name_of_your_new_branch]
 # Why would you want to use a branch other than the default master?
 - so you don't have a lot of unnecessary files or commits in your default
+# Give an example for when you would use git merge and give an example for when it would be better to submit a pull request to have your branch merged
+- when u are working on a project with other people
+# What command do you use to send all of the work that you've done locally to your remote repository?
+-  git push 
