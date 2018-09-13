@@ -25,12 +25,22 @@ for ( let i = 0; i < 21; i++ ) {
 }
 
 // Fizz Buzz | Answer # 4
-for ( let i = 0; i < 101; i++ ) {
+for ( let i = 1; i < 101; i++ ) {
   if (i % 3 === 0 && i % 5 === 0) {
-    console.log('FizzBuzz')
+    console.log('FizzBuzz ' + i)
   } else if (i % 3 === 0) {
-    console.log('Fizz');
+    console.log('Fizz ' + i);
 } else if (i % 5 === 0) {
-  console.log('Buzz')
+  console.log('Buzz ' + i)
+  }
 }
-}
+
+// Getting To Know You || Answer # 5
+const shahzad = ["Shahzad", 1000, "Austin"];
+const jim = ["Jim", 16, "All cities"];
+const reuben = ["Reuben", 22, "Durham"];
+const daniel = ["Daniel", 186, "Dallas"];
+const ryan = ["Ryan", 65, "Denver"];
+
+// #1
+shahzad[0] = ='Gameboy';
