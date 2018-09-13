@@ -43,4 +43,43 @@ const daniel = ["Daniel", 186, "Dallas"];
 const ryan = ["Ryan", 65, "Denver"];
 
 // #1
-shahzad[0] = ='Gameboy';
+shahzad[0] = 'Gameboy';
+console.log(shahzad);
+// #2
+daniel[1] = 187;
+console.log(daniel);
+// #3
+ryan[2] = 'Gotham City';
+console.log(ryan);
+// #4
+reuben.pop();
+reuben.push('Chicago');
+console.log(reuben);
+ // #5
+ jim.pop();
+ jim.pop();
+ jim.pop();
+ jim.push('Los Angeles', 'Dubai', 'Toronto');
+ console.log(jim);
+
+ // #6
+ jim.splice (0, 1)
+ console.log(jim);
+
+//  Yell at the Ninja Turtle || Answer # 6
+let tmnt = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+
+var bonus = [];
+
+tmnt = tmnt.splice('');
+
+for ( let i = 0; i < tmnt.length; i++ ) {
+  let temp = tmnt[i].split('');
+  for ( let k = 0; k < temp.length; k+=2 ) {
+    temp[k] = temp[k].toUpperCase();
+  }
+  bonus.push(temp.join(''));
+}
+console.log(bonus)
+
+// Return of the Closets || Answer # 7
