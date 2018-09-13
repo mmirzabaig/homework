@@ -23,3 +23,14 @@ for ( let i = 0; i < 21; i++ ) {
   console.log(array[getRandomInt(0, 2)])
   }
 }
+
+// Fizz Buzz | Answer # 4
+for ( let i = 0; i < 101; i++ ) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz')
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+} else if (i % 5 === 0) {
+  console.log('Buzz')
+}
+}
