@@ -81,5 +81,3 @@ for ( let i = 0; i < tmnt.length; i++ ) {
   bonus.push(temp.join(''));
 }
 console.log(bonus)
-
-// Return of the Closets || Answer # 7
