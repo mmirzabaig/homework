@@ -24,3 +24,8 @@ const sumDigit = (num) => {
   return sum;
 }
 console.log(sumDigit('42'))
+
+const calculateSide = (sideA, sideB) => {
+  return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+}
+calculateSide(8, 6);
