@@ -38,3 +38,33 @@ const sumArray = (array) => {
   return sum;
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+
+function isPrime(value) {
+  for(var i = 2; i < value; i++) {
+    if(value % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+isPrime(11)
+
+const isPrime = (value) => {
+  for (let i = 2; i < value; i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+isPrime(53)
+
+const printPrimes = (num) => {
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      console.log(i);
+    }
+  }
+}
+printPrimes(53)
