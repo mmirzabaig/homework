@@ -29,3 +29,12 @@ const calculateSide = (sideA, sideB) => {
   return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
 }
 calculateSide(8, 6);
+
+const sumArray = (array) => {
+  let sum = 0;
+  for ( let i = 0; i < array.length; i++ ) {
+    sum += array[i];
+  }
+  return sum;
+}
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
