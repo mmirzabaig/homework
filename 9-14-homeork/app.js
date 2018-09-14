@@ -13,3 +13,14 @@
    return str === str2;
  }
 console.log(checkPalindrome("Radar"));
+
+const sumDigit = (num) => {
+  num.toString();
+  num = num.split('');
+  let sum = 0;
+  for ( let i = 0; i < num.length; i++ ) {
+    sum += Number(num[i]);
+  }
+  return sum;
+}
+console.log(sumDigit('42'))
