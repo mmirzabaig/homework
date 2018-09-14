@@ -6,3 +6,10 @@
 
 // 3- What are the implications of the ability of a function to return a value?
 // Answer- you can use return values as arguments for other actions in your code. Return also stops the function from running any further
+
+ const checkPalindrome = (str) => {
+   str = str.toUpperCase();
+   let str2 = str.split('').reverse().join('');
+   return str === str2;
+ }
+console.log(checkPalindrome("Radar"));
