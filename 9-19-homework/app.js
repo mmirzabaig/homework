@@ -127,7 +127,50 @@ function pokemonGame() {
   }
 battle(playerArray, pcArray);
 }
+
+$(document).ready(function () {
+$('section' ).addClass ('deck')
+});
+$('body').css({'background-image' : 'url("gastly.jpg")'});
+$('h1').css({
+  'font-size' : '45px',
+  'color' : 'yellow',
+  'text-align' : 'center',
+  'margin' : '50px 0 30px 0'
+});
+$('h2', 'buttom').css({
+  'display' : 'inline'
+});
+$('button').css({
+  'background-color' : 'Transparent',
+  'border' : 'none'
+})
+$('.player').css({
+  'font-size' : '30px',
+  'color' : 'blue',
+  'position' : 'absolute',
+  'left' : '250px'
+});
+$('.pc').css({
+  'font-size' : '30px',
+  'color' : 'red',
+  'position' : 'absolute',
+  'right' : '250px'
+})
+$('.deal').css({
+  'font-size' : '25px',
+  'color' : 'green',
+  'position' : 'absolute',
+  'left' : '770px',
+  'margin' : '50px 0 0 0'
+  //'text-align' : 'center'
+})
+
+
+
 pokemonGame();
+
+
 // pass in two arrays. 1 for players , other for pc
 // for ( let i = 0; i < 3; i++ ) {
 //    if (playerCardDamage > pcCardDamage) {
