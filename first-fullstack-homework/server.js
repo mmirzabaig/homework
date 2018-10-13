@@ -7,16 +7,48 @@ const Phones = require('./models/phones')
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
-// app.get('/phones', (req, res) => {
-//   res.send(Phones);
-// });
+require('./db/db');
 
 app.get('/phones', (req, res) => {
-  console.log(req.body, ' this is your body');
   res.render('index.ejs', {
-    food: Phones
-  });
+    phones : Phones
+  })
+});
+// app.get('/phones', (req, res) => {
+//   Phones.find({name : 'iPhone X'}, (err, allPhones) => {
+//     if (err){
+//       console.log(err);
+//     } else {
+//       res.render('index.ejs', {phones: allPhones});
+//     }
+//   })
+// })
+app.get('/phones/new', (err, res) => {
+  res.render('new.ejs');
 })
+
+app.post('/phones', (req, res) => {
+  console.log(req.body);
+
+  Phones.create(req.body, (err, createdPhones) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(createdPhones);
+      res.redirect('/phones')
+    }
+  })
+});
+
+
+
+
+// app.get('/phones', (req, res) => {
+//   console.log(req.body, ' this is your body');
+//   res.render('index.ejs', {
+//     food: Phones
+//   });
+// })
 
 
 
