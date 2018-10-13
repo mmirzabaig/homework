@@ -6,6 +6,13 @@
   </head>
   <body>
     <h1>Welcome To Main Page</h1>
+  <%  for ( let i = 0; i < food.length; i++ ) { %>
+      <ul>
+  <%=      food[i].name  %> </br>
+  <%=      food[i].cuisine %> </br>
+  <%=       food[i].hot %> </br> 
+      </ul>
+  <%  } %>
 
   </body>
 </html>
