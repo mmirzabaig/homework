@@ -9,24 +9,21 @@ app.use(methodOverride('_method'));
 
 require('./db/db');
 
+// Display all the phones on the index page
 app.get('/phones', (req, res) => {
-  res.render('index.ejs', {
-    phones : Phones
+  Phones.find({}, (err, Phones) => {
+    if (err){
+      console.log(err);
+    } else {
+      res.render('index.ejs', {phones: Phones});
+    }
   })
-});
-// app.get('/phones', (req, res) => {
-//   Phones.find({name : 'iPhone X'}, (err, allPhones) => {
-//     if (err){
-//       console.log(err);
-//     } else {
-//       res.render('index.ejs', {phones: allPhones});
-//     }
-//   })
-// })
+})
+// Form to get info for a new Phone
 app.get('/phones/new', (err, res) => {
   res.render('new.ejs');
 })
-
+// Function to to create a new phone with info from app.get(new)
 app.post('/phones', (req, res) => {
   console.log(req.body);
 
@@ -39,16 +36,9 @@ app.post('/phones', (req, res) => {
     }
   })
 });
-
-
-
-
-// app.get('/phones', (req, res) => {
-//   console.log(req.body, ' this is your body');
-//   res.render('index.ejs', {
-//     food: Phones
-//   });
-// })
+// app.delete('/phones', (req, res) => {
+//
+// });
 
 
 

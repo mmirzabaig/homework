@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Welcome To Main Page</h1>
 
-    <ul>
-    <%=  phones.name %> </br>
-    </ul>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
+<body>
+  <h1>Welcome To Main Page</h1>
 
-  </body>
+  <ul>
+    <%  for (let i = 0; i < phones.length; i++) { %>
+    <li>
+      <%= phones[i].name %> </br>
+      <%= phones[i].company %> </br>
+      <%= phones[i].fourG %> </br>
+    </li>
+    <%} %>
+  </ul>
+</body>
+
 </html>
