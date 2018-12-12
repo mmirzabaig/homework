@@ -129,7 +129,7 @@ battle(playerArray, pcArray);
 }
 
 $(document).ready(function () {
-$('section' ).addClass ('deck')
+
 });
 $('body').css({'background-image' : 'url("gastly.jpg")'});
 $('h1').css({
@@ -165,6 +165,11 @@ $('.deal').css({
   'margin' : '50px 0 0 0'
   //'text-align' : 'center'
 })
+// $('img').css({
+//   'width': '640px',
+//   'height' : '640px',
+//   'border': '2px solid black'
+// })
 
 
 

@@ -1,1 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  border: 2px solid black;
+  width: 150px;
+  height: 200px;
+}
 
+.game {
+  /* padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around; */
+
+}
+
+.pcGame {
+  /* padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; */
+  /* -webkit-flex-flow: row wrap;
+  justify-content: space-around; */
+}
+
+.playerCards {
+  margin: 200px 0 0 200px;
+}
+.pcCards {
+  margin: 200px 0 0 1350px;
+}
+.playerCards, .playerCards {
+  display: inline;
+  float: left;
+}

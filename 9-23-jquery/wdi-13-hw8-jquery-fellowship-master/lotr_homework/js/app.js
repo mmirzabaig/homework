@@ -40,39 +40,29 @@ const lands = [
 // ============
 // Chapter 1
 // ============
-const makeMiddleEarth = (lands) => {
-
+const makeMiddleEarth = () => {
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-
   console.log("Trying to make middle earth.");
-
   // 1. create a section tag with an id of middle-earth
-  $( document ).ready(function() {
-    document.createElement('section').setAttribute('id','middle-earth');
-    for (var i = 0; i<lands.length; i++){
-      console.log('hello');
-            var article = document.createElement('article');
-            document.querySelector('#middle-earth').appendChild(article);
-            var h1 = document.createElement('h1');
-            h1.textContent = lands[i];
-            article.appendChild(h1);
-          }
-});
-
+  const section = $('<section id="middle-earth"></section>');
   // 2. append the section to the body of the DOM.
+  $(section).appendTo($("body"));
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
-  //   3a. creates an article tag (there should be one for each land when the loop is done)
-
-  //   3b. gives each land article an `id` tag of the corresponding land name
-
-  //   3c. includes an h1 with the name of the land inside each land article
-
-  //   3d. appends each land to the middle-earth section
-
+  for (i = 0; i < lands.length; i++) {
+    //   3a. creates an article tag (there should be one for each land when the loop is done)
+    const article = $("<article/>");
+    //   3b. gives each land article an `id` tag of the corresponding land name
+    article.attr("id", lands[i]);
+    //   3c. includes an h1 with the name of the land inside each land article
+    const landName = $(`<h1>${lands[i]}</h1>`);
+    $(landName).appendTo(article);
+    //   3d. appends each land to the middle-earth section
+    article.appendTo(section);
+  };
 };
-makeMiddleEarth(lands);
+makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".

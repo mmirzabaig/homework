@@ -43,29 +43,33 @@ app.get('/phones/:id', (req, res) => {
     res.render('show.ejs', {phones : foundPhone})
   })
 });
-
-app.get('/phones/:id/edit', (req, res) => {
-console.log(req.body, 'EDIT')
-  res.render('edit.ejs', {
-    phones: Phones[req.params.id],
-    id : req.params.id
-  });
-});
-
-app.put('/phones/:id', (req, res) => {
-  Phones.findByIdAndUpdate(req.params.id, (err, updatedPhone) => {
-    res.redirect('/phones')
-  });
-});
-
 // delete object individually
 app.delete('/phones/:id', (req, res) => {
   console.log(req.params.id, ' body to be deleted');
 
-  Phones.findByIdAndRemove(req.params.id, (err, phonesFound) => {
+  Phones.findByIdAndRemove(req.params.id, (err, foundPhone) => {
     res.redirect('/phones');
   })
 });
+
+
+app.get('/phones/:id/edit', (req, res) => {
+
+
+Phones.findById(req.params.id, (err, foundPhone) => {
+  res.render('edit.ejs', {
+    phone: Phones
+  });
+});
+});
+
+app.put('/phones/:id', (req, res) => {
+  Phones.findByIdAndUpdate(req.params.id, req.body, (err, updatedPhone) => {
+    res.redirect('/phones');
+  });
+});
+
+
 
 
 

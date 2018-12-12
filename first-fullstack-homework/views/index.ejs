@@ -12,6 +12,7 @@
   <ul>
     <%  for (let i = 0; i < phones.length; i++) { %>
     <li>
+    <a href="/phones/<%=phones[i].id%>"><%=phones[i].name%></a>
       <%= phones[i].name %> </br>
       <%= phones[i].company %> </br>
       <%= phones[i].fourG %> </br>
@@ -22,9 +23,7 @@
           <input type='submit' value='View Phone'>
       </form>
 
-          <form action="/phones/<%=phones[i].id%>/edit" method="GET">
-            <input type="submit" value="Edit Phone">
-      </form>
+        <a href="/phones/<%=phones[i].id%>/edit">Edit<%=phones[i].name%></a>
     </li>
     <%} %>
   </ul>
